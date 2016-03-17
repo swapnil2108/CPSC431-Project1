@@ -1,7 +1,7 @@
 var main = function() {
     "use strict";
     function myfunction() {
-        $.get("http://localhost:3000/reddit", function(getData) {
+        $.get("http://localhost:3000/reddit", function(getData){
 			  getData.forEach(function(reddit) {
              
 			 var postsList ="<div class ='postContent'>"
@@ -17,10 +17,10 @@ var main = function() {
               
 			  $(postsList).appendTo('div.postsContainer');
 			  $("#"+reddit.id+"").text(reddit.likes);
-              });
-	 
-     myfunction();
-	  
-	  
-  };
-    $(document).ready(main);
+      });
+	 });
+	}
+	 myfunction();
+    };
+
+$(document).ready(main);
