@@ -5,20 +5,38 @@
       <link rel="stylesheet" type="text/css" href="style.css">
       <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	  <script src="reddit.js"></script>
+	  <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
   </head>
   <body>
-      <header>
-          <div class="header-container">
-               <h3>Miny Reddit</h3>
-                <div class="login-area">
-                     <form>
-                        <p><input type="text" value="Email"></p>
-                        <p><input type="password" value="Password"></p>
-                        <p><input type="submit"  value="login"></p>
-                     </form>
-               </div>
-          </div>
-      </header>
+    <header>
+	<fieldset class="lacontainer">
+    <fieldset class="la">
+    <legend>Login:</legend><br><br>
+    Username:
+    <input type="text" placeholder="username" id="username"><br>
+    <br>
+    Password:
+    <input type="password" placeholder="password" id="password">
+    <br><br>
+    <button id="login">login</button>
+    </fieldset>
+	 <fieldset class="na">
+    <legend>Register:</legend><br><br>
+    Username:
+    <input type="text" placeholder="username" id="reguser"><br>
+    <br>
+    Password:
+    <input type="password" placeholder="password" id="regpass">
+    <br><br>
+    confirm<br>
+    Password:
+    <input type="password" placeholder="password" id="confirmpass">
+    <br><br><br>
+    <button id="Register">Register</button>     
+</fieldset>
+</fieldset>
+        </header>
       <main>
           <div class="main-container">
               <div class="top-menu">
@@ -30,6 +48,7 @@
                <div class="postsContainer">
                      
              </div>
+			 
       </main>
       <footer>
           <div class="footer-container">
