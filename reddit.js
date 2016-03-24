@@ -14,6 +14,7 @@ var main = function() {
 							+"<div class ='Content-List'>"
 							+"<p>"+"<a href="+JSON.stringify(reddit.main_link)+">"+reddit.link_title+"</a>"
 							+"</p>"
+							+"</div>"
 							+"</div>";
 			  $(postsList).appendTo('div.postsContainer');
 
@@ -50,7 +51,44 @@ var main = function() {
 
 	 });//end of $.get function
 	}
-	
+	function search(){
+        $('#search').keyup(function(){
+            var searchField = $('#search').val();
+            var regex = new RegExp(searchField, "i");
+			console.log(regex);
+			
+		    var postsList ="<div class ='postContent'>"
+            var count = 1;
+            $.get("http://localhost:3000/reddit", function(data) {
+              $.each(data, function(key, reddit){
+				  var imgId=reddit.id;
+                if ((reddit.link_title.search(regex) != -1) || (reddit.main_link.search(regex) != -1)) {
+				
+                  
+				   postsList+="<div class = 'votes'>"
+			                +"<img  id="+imgId+" class='voteUpButton' src='image/up.png'>"+"<br>"
+                            +"<strong id ="+reddit.id+" class='votesNum'>"+reddit.likes+"</strong>"+"<br>"
+                            +"<img  id="+imgId+" class='voteDownButton' src='image/down.png'>"
+							+"</div>"
+							+"<div class ='Content-List'>"
+							+"<p>"+"<a href="+JSON.stringify(reddit.main_link)+">"+reddit.link_title+"</a>"
+							+"</p>"
+							+"</div>"
+							+"</div>";
+                  if(count>=1){
+                    postsList += "<div class ='postContent'>"
+                  }
+                  count++;
+                }
+              });
+              postsList += '</div>';
+			  $('.postsContainer').empty();
+              $('.postsContainer').html(postsList);
+			  if (searchField===""){$('.postsContainer').empty();myfunction();}
+            });
+           			
+        });
+      }
 	function login(){
 		$("#login").on("click", function() {
     var username = document.getElementById("username").value;
@@ -115,70 +153,8 @@ var main = function() {
         }
     });
 }
-		jQuery.validator.setDefaults({
-        debug: true,
-        success: "valid"
-    });
-    $("#postform").validate({
-        rules: {
-            field: {
-                required: true,
-                url: true
-            }
-        }
-    });
-    var form = $("#postform");
-    form.validate();//End- post form validation
-    //Start- JQuery code for post fields
-    $("#postbutton").click(function(element) {
-        var check = $("#checkbox").is(':checked');
-        if (check === true) {
-            if ($("#input1").val() === "" || $("#input2").val() == "" || $("#input3").val() == "") {
-                element.preventDefault();
-                setTimeout(fade_out, 5000);
-                $("#spanbutton").css({
-                    "visibility": "visible",
-                    "display": "inline"
-                }).text("Enter input");
-
-                function fade_out() {
-                    $("#spanbutton").fadeOut().empty();
-                }
-            } else {
-                if (form.valid() === true) {
-
-                    $("#spanbutton").css({
-                        "visibility": "visible"
-                    }).text("");
-                    $.post("http://localhost:3000/reddit", {
-                        "link_title": $("#input1").val(),
-                        "main_link": $("#input2").val(),
-                        "image_link": $("#input3").val(),
-                        "likes": 0,
-                        "post": "submitted"
-                    }, function() {
-                        myfunction();
-
-                    });
-
-                }
-
-            }
-        } else {
-            element.preventDefault();
-            setTimeout(fade_out, 5000);
-
-            function fade_out() {
-                $("#spanbutton").fadeOut().empty();
-            }
-            $("#spanbutton").css({
-                "visibility": "visible",
-                "display": "inline"
-            }).text("Log in to post");
-        }
-    });
-	
 	 myfunction();
+	 search();
 	 login();
     };
 

@@ -46,7 +46,20 @@ background: linear-gradient(to left, #FF512F , #F09819); /* W3C, IE 10+/ Edge, F
         
         
 }
+#SearchForm{
+	
+	display :inline;
+	padding-left : 20%;
+	
+	
+}
 
+
+#search{
+	
+	height: 40px;
+    width: 250px;
+}
 .header{
 	
 	align:center;
