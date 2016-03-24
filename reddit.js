@@ -22,7 +22,7 @@ var main = function() {
       });//end of ForEach loop
 
       //Vote up event:
-      $("img.voteUpButton").one("click", function(){
+      $("img.voteUpButton").bind("click", function(){
            var $imgId= this.id, main_link, link_title, image_link ,result=$("#"+this.id+".votesNum").text();
            result++;// result is the number of likes after increasing or decreasing
            $("#"+this.id+".votesNum").text(result);//updating the html with the new "Likes" value
@@ -65,7 +65,7 @@ var main = function() {
         else{
             var j = JSON.parse('{"name":"' + username + '","password":"' + pwd + '"}');
     $.ajax({
-        url: "http://localhost:3004/users",
+        url: "http://localhost:3000/users",
         type: "GET",
         dataType: "json",
         data: j,
@@ -100,7 +100,7 @@ var main = function() {
             $.ajax({
         type: "POST",
         data:j,
-        url:  "http://localhost:3004/users",
+        url:  "http://localhost:3000/users",
         dataType: "json",
         success: function(){
             alert("Registered successfully");

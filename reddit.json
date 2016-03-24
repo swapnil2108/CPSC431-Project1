@@ -3,7 +3,7 @@
     {
       "id": 1,
       "image_link": "https://b.thumbs.redditmedia.com/uuIfy22CeyicabyjUz9i9fa3nc5u9KVnZ2JK9dawugw.jpg",
-      "likes": 5874,
+      "likes": 5894,
       "link_title": "VR Gaming is so Immersive You'll Want to Stick Your Head Through the Floor",
       "main_link": "https://gfycat.com/ParallelLinearBlackfly",
       "post": "submitted"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "image_link": "#",
-      "likes": 6795,
+      "likes": 6803,
       "link_title": "Justice Department: States Should Not Jail Poor People Over Fine Nonpayment",
       "main_link": "http://www.nbcnews.com/news/us-news/department-justice-states-should-not-jailed-over-fine-nonpayment-n537796",
       "post": "submitted"
@@ -151,6 +151,28 @@
       "link_title": "LPT: Never say something is 'easy' when explaining it to someone",
       "main_link": "https://www.reddit.com/r/LifeProTips/comments/4achu7/lpt_never_say_something_is_easy_when_explaining/",
       "post": "submitted"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "karthik",
+      "password": "karthik"
+    },
+    {
+      "id": 2,
+      "name": "dean",
+      "password": "dean"
+    },
+    {
+      "id": 3,
+      "name": "swapnil",
+      "password": "swapnil"
+    },
+    {
+      "name": "dexter",
+      "password": "dexter",
+      "id": 4
     }
   ]
 }
