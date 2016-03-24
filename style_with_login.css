@@ -1,0 +1,88 @@
+.login-area{
+
+float :right;
+}
+
+.votes{
+	float: left;
+    margin-right: 7px;
+    margin-left: 7px;
+    background: transparent;
+    overflow: hidden;
+	}
+	
+	.Content-List {
+    overflow: hidden;
+    margin-left: 3px;
+    opacity: 1;
+	padding: 10px 20px;
+}
+
+.postContent
+{
+	margin: 0;
+    margin-bottom: 8px;
+    padding: 20px 10px;
+}
+
+.na{
+	
+	float : right;
+	display :inline;
+    padding: 20px 10px;
+	
+}
+
+.la{
+    text-align: center;
+}
+.lacontainer{
+	
+background: #FF512F; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FF512F , #F09819); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FF512F , #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+}
+#SearchForm{
+	
+	display :inline;
+	padding-left : 20%;
+	
+	
+}
+
+
+#search{
+	
+	height: 40px;
+    width: 250px;
+}
+.header{
+	
+	align:center;
+	display :inline;
+}
+.ba{
+    background-color:dimgrey;
+}
+.fa{
+    border-width: thick;
+    display: inline;
+    border-color: teal;
+    width: 26em;
+    height: 31em;
+}
+.fa1{
+    border-color: teal;
+    border-width: thick;
+    float: right;
+    display: inline;
+      width: 26em;
+    height: 31em;
+}
+.la1{
+    font-weight: bold;
+    font-size: 30px;
+    color: black
+}

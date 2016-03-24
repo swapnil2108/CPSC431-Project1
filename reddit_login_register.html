@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+      <title>CS431-Project1</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	  <script src="reddit.js"></script>
+	  <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  </head>
+  <body>
+    <header>
+	<form id="SearchForm">
+        <input type="search" class="form-control input-lg" id="search" placeholder="Search....">
+        </form>
+        <input type="button" data-target="modal1" class="btn modal-trigger" class="la" id="login" value="Login/Register">
+        <input type="button" data-target="modal1" class="btn modal-trigger" class="la" id="signout" value="Signout">
+        <form>
+        <div id="modal1" class="modal">
+    <div class="modal-content" id="ca">
+      <div class="row">
+    <form class="col s12">
+        <fieldset class="fa">
+            <legend class="la1">login</legend>
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="username" type="text" class="validate">
+            <label for="username">UserName</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+            <div class="row"><br><br><br><br><br>
+           <button class="btn modal-trigger" class="la" id="log">Login</button>
+          </div>
+        </div>
+      </div>
+            </fieldset>
+        <fieldset class="fa1">
+            <legend class="la1">Register</legend>
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="reguser" type="text" class="validate">
+            <label for="reguser">username</label>
+        </div>
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="regpass" type="password" class="validate">
+          <label for="regpasss">Password</label>
+        </div>
+      </div>   
+        <div class="row">
+        <div class="input-field col s10">
+            <input type="checkbox" id="myCheckbox" class="filled-in" />
+            <label for="myCheckbox">Show Password</label>
+                </div>
+            </div>
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="regemail" type="email" class="validate">
+          <label for="regemail">Email</label>
+        </div>
+          <div class="row">
+           <button class="btn modal-trigger" class="la" id="reg">Register</button>
+          </div>
+      </div>
+            </fieldset>
+    </form>
+  </div>
+    </div>
+        </div>
+        </form>
+<fieldset>
+<div class="top-menu">
+                 <div class="tabs">
+                     <a href=""><span class="active">Newest</span></a><a href=""><span>Oldest</span></a></a>
+                 </div>
+              </div>
+            </fieldset>
+        </header>
+      <main>
+          <div class="main-container">
+               <div class="postsContainer">
+             </div>
+			 
+      </main>
+      <footer>
+          <div class="footer-container">
+          </div>
+      </footer>
+      
+  </body>
+</html>
